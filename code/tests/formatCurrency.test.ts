@@ -1,6 +1,7 @@
 import { expect, test } from 'vitest'
-import { formatCurrency } from '../src/formatCurrency'
+import { dollarsToCents, formatCurrency } from '../src/formatCurrency'
 
-test('formats cents as dollars', () => {
+test('covers the core currency operations', () => {
   expect(formatCurrency(1234)).toBe('$12.34')
+  expect(dollarsToCents(12.34)).toBe(1234)
 })
